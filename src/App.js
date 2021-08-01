@@ -6,7 +6,8 @@ import DisplayBalances from './components/DisplayBalances';
 import EntryLines from './components/EntryLines';
 import NewEntryForm from './components/NewEntryForm';
 import ModalEdit from './components/ModalEdit';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { getAllEntries } from './actions/entries.actions';
 
 function App() {
   const [income, setIncome] = useState(0)
@@ -20,7 +21,7 @@ function App() {
     const index = entries.findIndex(entry => entry.id === id)
     setEntry(entries[index])
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen, id])
+  }, [isOpen, id, entries])
 
   useEffect(() => {
     let totalIncome = 0;
@@ -37,6 +38,12 @@ function App() {
     setIncome(totalIncome);
     // console.log(`total income ${totalIncome} and total expenses ${totalExpense}`)
   }, [entries])
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllEntries())
+  }, [dispatch])
 
   return (
     <Container>

@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "description": "Work Income",
+      "value": 1500,
+      "isExpense": false
+    },
+    {
+      "id": 2,
+      "description": "Cable bill",
+      "value": 200,
+      "isExpense": true
+    },
+    {
+      "id": "e3fbf39d-3143-47cf-b986-9e63d85da322",
+      "description": "poker",
+      "value": "30",
+      "isExpense": true
+    },
+    {
+      "id": "a08d439a-27a5-4486-8a37-929f80c5cce6",
+      "description": "Poker winnings",
+      "value": "150",
+      "isExpense": false
+    },
+    {
+      "id": "a96bc0b1-6878-42e0-b6bf-a6b12cf90c38",
+      "description": "Tutor paycheck",
+      "value": "500",
+      "isExpense": false
+    }
+  ]
+}
